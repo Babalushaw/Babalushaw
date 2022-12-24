@@ -1,0 +1,147 @@
+
+    "productCar":  [
+        {
+            "id":"string",
+            "name":"string",
+            "description":"string",
+            "homeTestDrive":"boolean",
+            "productUrl":"string",
+            "imgUrl":"string",
+            "type":"Automatic or mannual - string data type", 
+            "oilType":"petrol, diesel or CNG - string data type",
+            "Driven":"in km - string data type",
+            "address":"string",
+            "likes":"Integer",
+            "price":"String",
+            "emi":"string",
+            "emiUrl":"url",
+            "viewBenifits":"benifits url - string",
+            "checkSaving":"saving url- string",
+            "bookNow":"Book Now url- string",
+            "freeTestDrive":"Free test drive url -string",
+            "feedback":"url for feedback -string",
+            "granteedBuyBack":"url -string",
+            "sellingCriteria":[{
+                "likeThisCar":{
+                    "img":"image url for this- string",
+                    "knowMore":"know more url- string"
+                },
+                "buyBack":{
+                    "img":"image url for this- string",
+                    "knowMore":"know more url- string"
+
+                },
+                "capital":{
+                    "img":"image url for this- string",
+                    "knowMore":"know more url- string"
+
+                },
+                "homeTestDriven":{
+                    "img":"image url for this- string",
+                    "knowMore":"know more url- string"
+                }
+            }],
+            "shareWithFriends":{
+                "facebook":{
+                    "logoImage":"logo image url",
+                    "LogoUrl":"url for sharing"
+                },
+                "twitter":{
+                    "logoImage":"logo image url",
+                    "LogoUrl":"url for sharing"
+                },
+                "gmail":{
+                    "logoImage":"logo image url",
+                    "LogoUrl":"url for sharing"
+                }
+
+            },
+            "carOverview":{
+                "makeYear":"",
+                "registrationYear":"",
+                "kmDriven":"",
+                "tramission":"",
+                "noOfOwner":"",
+                "insuranceValidity":"",
+                "insuranceType":"",
+                "rto":"",
+                "carLocation":""
+            },
+            "inspectionReport":{
+                "image":"image url- string",
+                "exterior":{
+                    "logo":"image url- string",
+                    "count":"number",
+                    "exteriorUrl":"url -string"
+                },
+                "engine":{
+                    "logo":"image url- string",
+                    "count":"number",
+                    "exteriorUrl":"url -string"
+                },
+                "roadTest":{
+                    "logo":"image url- string",
+                    "count":"number",
+                    "exteriorUrl":"url -string"
+                },
+                "underbody":{
+                    "logo":"image url- string",
+                    "count":"number",
+                    "exteriorUrl":"url -string"
+                },
+                "tyre":{
+                    "logo":"image url- string",
+                    "count":"number",
+                    "exteriorUrl":"url -string"
+                }
+
+            },
+            "carSpecification":{
+                "mileage":{
+                    "logo":"logo url",
+                    "data":"data in string"
+                },
+                "groundClearance":{
+                    "logo":"logo url",
+                    "data":"data in string" 
+                },
+                "bootSpace":{
+                    "logo":"logo url",
+                    "data":"data in string"
+                },
+                "seatingCapacity":{
+                    "logo":"logo url",
+                    "data":"data in string"
+                },
+                "fuelTankCapacity":{
+                    "logo":"logo url",
+                    "data":"data in string"
+                },
+                "maxPower":{
+                    "logo":"logo url",
+                    "data":"data in string"
+                },
+                "viwAllSpecification":"url for this"
+            },
+            "topFeaturesCar":"",
+
+            "emiCalculator":{
+                "emi":"",
+                "3DviewValue":"",
+                "loanAmount":"",
+                "downPayment":"",
+                "duration":"",
+                "interestRate":"",
+                "checkEligibility":"",
+                "despcription":""
+            }
+            
+
+
+
+        }
+
+    ]
+
+    
+}
