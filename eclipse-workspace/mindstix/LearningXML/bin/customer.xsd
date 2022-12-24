@@ -10,7 +10,7 @@
 
 		</sequence>
 	</complexType>
-	<complexType name="addressType">
+	<complexType name="adresType">
 		<sequence>
 			<element name="address" type="tns:addressType"></element>
 		</sequence>
@@ -23,17 +23,25 @@
 			<element name="accountNo" type="string"></element>
 			<element name="email" type="string"></element>
 			<element name="phone" type="string"></element>
-			<element name="street" type="string"></element>
-			<element name="district" type="string"></element>
-			<element name="postalCode" type="string"></element>
+
 			<element name="panCardNo" type="string"></element>
 			<element name="accountBalance" type="string"></element>
 			<element name="state" type="string"></element>
 
-
-
 		</sequence>
-		<attribute name="id" type="ID" use="required"></attribute>
+
 	</complexType>
+	<complexType name="addressType">
+		<sequence>
+			
+			<element name="street" type="string"></element>
+			<element name="district" type="string"></element>
+			<element name="postalCode" type="string"></element>
+		</sequence>
+	</complexType>
+
+
+	<attribute name="id" type="ID" use="required"></attribute>
+
 	<element name="globalcustomer" type="tns:customersType"></element>
 </schema>
