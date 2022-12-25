@@ -1,0 +1,239 @@
+openapi: 3.0.0
+info:
+  title: Buy Car @Spinny
+  description: This API consumes product car and car_Id
+  contact:
+    name: Babalu kumar
+    url: www.dummyInfo.com
+    email: dummygmai@gmail.com
+  version: 1.0.0
+servers:
+  - url: https://www.spinny.com/API/
+    description: car @Spinny
+  - url: https://www.spinny.com/
+    description: Spinny
+
+paths:
+  /car:
+    get:
+      description: Endpoint used for obtaining the information of all cars.
+      responses:
+        200:
+          description: Successfully retrieved details of all cars
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cars:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/car"
+        
+        404:
+          description: No cars in the database
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "No cars in the database" }
+
+        503:
+          description: Service unavailable
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Service unavailable" }
+
+    post:
+      description: Endpoint used for creating new carts based on carId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/carId"
+
+      responses:
+        201:
+          description: New car created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/carId"
+
+        400:
+          description: car already created for this productId
+          content:
+            application/json:
+              schema:
+                type: string
+                example:
+                  {
+                    "message": "Car already created for this CarId",
+                  }
+        404:
+          description: carId not present in the database
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "carId not present in the database" }
+        503:
+          description: Service unavailable
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Service unavailable" }
+
+  /car/{carId}:
+    parameters:
+      - name: carId
+        in: path
+        description: Id of the car which needs to be retrieved
+        required: true
+        schema:
+          type: integer
+          example: 2000
+
+    get:
+      description: Endpoint used to retrieve individual car based on carId
+      responses:
+        200:
+          description: Successfully retrieved car product details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/car"
+
+        400:
+          description: Invalid carId parameter
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Missing/Invalid carId parameter" }
+
+        404:
+          description: carId not present in the database
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "carId not present in the database" }
+        503:
+          description: Service unavailable
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Service unavailable" }
+
+    put:
+      description: Endpoint to update the car
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/car"
+      responses:
+        200:
+          description: Car successfully updated
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Cat successfully updated" }
+        400:
+          description: Invalid request body or carId not available in the database
+          content:
+            application/json:
+              schema:
+                type: string
+                example:
+                  {
+                    "message": "Invalid request body or carId not available in the database",
+                  }
+        503:
+          description: Service unavailable
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Service unavailable" }
+    delete:
+      description: Endpoint to delete a car based on the carId
+      responses:
+        200:
+          description: Car successfully deleted
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Car successfully deleted" }
+        400:
+          description: Invalid carId
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Invalid carId" }
+      
+        404:
+          description: carId not present in the database
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "carId not present in the database" }
+        503:
+          description: Service unavailable
+          content:
+            application/json:
+              schema:
+                type: string
+                example: { "message": "Service unavailable" }
+
+components:
+  schemas:
+    carId:
+      type: object
+      properties:
+        carId:
+          type: integer
+          example: 2000
+    car:
+      type: object
+      properties:
+        cartId:
+          type: integer
+          example: 2000
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              productId:
+                type: integer
+                example: 1024
+              productName:
+                type: string
+                example: maruti 800
+              productCategory:
+                type: string
+                example: petrol egine
+              productPrice:
+                type: number
+                example: 230000.90
+              productQuantity:
+                type: integer
+                example: 3
+        totalCount:
+          type: integer
+          example: 10
+        totalPrice:
+          type: number
+          example: 64446534
+
+     
