@@ -38,16 +38,22 @@ public class MyController {
     public courses update(@RequestBody courses Course){
         return this.courseService.update(Course);
     }
-    @DeleteMapping("/delete/{id}")
+
+    @GetMapping("/delete/{id}")
+    @ResponseBody
     public ResponseEntity<HttpStatus> delete(@PathVariable int id){
+        System.out.println(id+ " is of type " + ((Object)id).getClass().getSimpleName());
         try {
             this.courseService.delete(id);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
         }catch (Exception e){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
     }
-
+@GetMapping("/{id}")
+    public void d(@PathVariable String id){
+        this.courseService.delete(Integer.parseInt(id));
+}
 
 }
