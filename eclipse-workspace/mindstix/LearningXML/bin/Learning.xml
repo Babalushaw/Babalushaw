@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE customers SYSTEM "customer.dtd">
+<customers>
+	<customer id="c1">
+		<name>Hardik</name>
+		<accountNo>985259273647384</accountNo>
+		<email>hardik@mindstix.com</email>
+		<phone>77474747463</phone>
+		<panCardNo>HEBDJ7434</panCardNo>
+		<accountBalance>5000</accountBalance>
+		<address>
+			<street>war</street>
+			<district>vaishali</district>
+			<state>bihar</state>
+			<postalCode>844112</postalCode>
+		</address>
+	</customer>
+	<customer id="c2">
+		<name>Hardik</name>
+		<accountNo>985259273647384</accountNo>
+		<email>hardik@mindstix.com</email>
+		<phone>77474747463</phone>
+		<panCardNo>HEBDJ7434</panCardNo>
+		<accountBalance>5000</accountBalance>
+		<address>
+			<street>war</street>
+			<district>vaishali</district>
+			<state>bihar</state>
+			<postalCode>844112</postalCode>
+		</address>
+	</customer>
+   
+</customers>

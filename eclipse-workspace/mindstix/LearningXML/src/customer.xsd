@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/customer"
+	xmlns:tns="http://www.example.org/customer"
+	elementFormDefault="qualified">
+
+	<complexType name="customersType">
+		<sequence>
+			<element name="customer" type="tns:customersType"></element>
+
+		</sequence>
+	</complexType>
+	<complexType name="adresType">
+		<sequence>
+			<element name="address" type="tns:addressType"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="cutomerType">
+		<sequence>
+
+			<element name="name" type="string"></element>
+			<element name="accountNo" type="string"></element>
+			<element name="email" type="string"></element>
+			<element name="phone" type="string"></element>
+
+			<element name="panCardNo" type="string"></element>
+			<element name="accountBalance" type="string"></element>
+			<element name="state" type="string"></element>
+
+		</sequence>
+
+	</complexType>
+	<complexType name="addressType">
+		<sequence>
+			
+			<element name="street" type="string"></element>
+			<element name="district" type="string"></element>
+			<element name="postalCode" type="string"></element>
+		</sequence>
+	</complexType>
+
+
+	<attribute name="id" type="ID" use="required"></attribute>
+
+	<element name="globalcustomer" type="tns:customersType"></element>
+</schema>

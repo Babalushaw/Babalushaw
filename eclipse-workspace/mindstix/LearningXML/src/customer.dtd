@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT customers (customer+)>
+<!ELEMENT customer (name,accountNo,email,phone,panCardNo,accountBalance,address)>
+<!ELEMENT address (street,district,state,postalCode)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT accountNo (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT district (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT postalCode (#PCDATA)>
+<!ELEMENT panCardNo (#PCDATA)>
+<!ELEMENT accountBalance (#PCDATA)>
+<!ATTLIST customer  id ID #REQUIRED>
